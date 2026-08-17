@@ -1,0 +1,295 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f7fb;
+  color: #222;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* NAVBAR */
+
+nav {
+  background: #1d3557;
+  color: white;
+  padding: 18px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h2 {
+  font-size: 24px;
+}
+
+nav div {
+  display: flex;
+  gap: 10px;
+}
+
+nav button {
+  background: white;
+  color: #1d3557;
+  padding: 9px 16px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+nav button:hover {
+  background: #e9ecef;
+}
+
+/* CONTENIDO */
+
+main {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* PRESENTACIÓN */
+
+.hero {
+  text-align: center;
+  padding: 50px 20px 30px;
+}
+
+.hero h1 {
+  color: #1d3557;
+  font-size: 38px;
+  margin-bottom: 12px;
+}
+
+.hero p {
+  color: #6c757d;
+  font-size: 18px;
+}
+
+/* PUBLICACIONES */
+
+.posts-container {
+  max-width: 700px;
+  margin: 20px auto 40px;
+}
+
+.posts-container > h2 {
+  color: #1d3557;
+  margin-bottom: 20px;
+}
+
+.post {
+  background: white;
+  padding: 22px;
+  margin-bottom: 18px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  border-left: 5px solid #457b9d;
+}
+
+.post h3 {
+  color: #1d3557;
+  margin-bottom: 10px;
+}
+
+.post p {
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.post small {
+  color: #6c757d;
+}
+
+/* CREAR PUBLICACIÓN */
+
+.create-post {
+  max-width: 700px;
+  margin: 30px auto;
+}
+
+.create-post h2 {
+  color: #1d3557;
+  margin-bottom: 15px;
+}
+
+.create-post form {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  font-size: 15px;
+  resize: vertical;
+}
+
+.create-post button {
+  margin-top: 10px;
+  background: #1d3557;
+  color: white;
+  padding: 11px 22px;
+  border-radius: 7px;
+  font-weight: bold;
+}
+
+.create-post button:hover {
+  background: #457b9d;
+}
+
+/* LOGIN Y REGISTRO */
+
+form {
+  background: white;
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  max-width: 500px;
+  margin: 30px auto;
+}
+
+form h2 {
+  color: #1d3557;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ced4da;
+  border-radius: 7px;
+  font-size: 15px;
+}
+
+form button {
+  background: #1d3557;
+  color: white;
+  padding: 11px 20px;
+  border-radius: 7px;
+  font-weight: bold;
+}
+
+form button:hover {
+  background: #457b9d;
+}
+
+/* MENSAJE PARA VISITANTES */
+
+.mensaje-login {
+  text-align: center;
+  background: white;
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.mensaje-login h2 {
+  color: #1d3557;
+  margin-bottom: 10px;
+}
+
+.mensaje-login p {
+  color: #6c757d;
+  margin-bottom: 20px;
+}
+
+.mensaje-login button {
+  background: #1d3557;
+  color: white;
+  padding: 11px 20px;
+  margin: 5px;
+  border-radius: 7px;
+  font-weight: bold;
+}
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+  nav {
+    padding: 15px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav div {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero {
+    padding-top: 30px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .posts-container,
+  .create-post {
+    width: 100%;
+  }
+}
+/* AUTENTICACIÓN */
+
+.auth-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.auth-container form {
+  width: 100%;
+  max-width: 450px;
+}
+
+.auth-container h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.form-description {
+  text-align: center;
+  color: #6c757d;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+.auth-container label {
+  display: block;
+  font-weight: bold;
+  color: #1d3557;
+  margin-bottom: 6px;
+}
+
+.auth-container input {
+  margin-bottom: 18px;
+}
+
+.auth-container button {
+  width: 100%;
+  margin-top: 5px;
+}
